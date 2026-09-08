@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chata pod Havranom — Belianske Tatry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand" onclick="navigate('home')">
+      <svg viewBox="0 0 40 40" fill="none"><path d="M2 30 L14 12 L20 22 L26 8 L38 30 Z" fill="#1B2A24"/><circle cx="30" cy="10" r="3.4" fill="#C99A44"/></svg>
+      <span>Chata pod Havranom</span>
+    </div>
+    <nav class="links" id="navLinks">
+      <a data-page="home" onclick="navigate('home')">Domov</a>
+      <a data-page="calendar" onclick="navigate('calendar')">Kalendár</a>
+      <a data-page="gallery" onclick="navigate('gallery')">Galéria</a>
+      <a data-page="nearby" onclick="navigate('nearby')">Okolie</a>
+      <a data-page="contact" onclick="navigate('contact')">Kontakt</a>
+      <button class="nav-cta" onclick="navigate('calendar')">Rezervovať</button>
+    </nav>
+    <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B2A24" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+  <section class="hero" style="padding-bottom:0;">
+    <div class="hero-inner">
+      <div>
+        <span class="kicker">Belianske Tatry, Slovensko</span>
+        <h1 id="heroTitle">Drevenica pod bielymi štítmi Havrana</h1>
+        <p class="lede" id="heroTagline">Súkromná horská chata na okraji lesa, 12 minút chôdze od Tatranskej Kotliny. Vlastná sauna, krb a výhľad na vápencové bralá.</p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="navigate('calendar')">Pozrieť voľné termíny</button>
+          <button class="btn-ghost" onclick="navigate('gallery')">Pozrieť chatu</button>
+        </div>
+      </div>
+      <svg class="hero-art" viewBox="0 0 500 380" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 260 L90 90 L150 190 L220 60 L300 210 L360 120 L420 230 L500 150 L500 380 L0 380 Z" fill="#E4DFD1"/>
+        <path d="M0 260 L90 90 L150 190 L220 60 L300 210 L360 120 L420 230 L500 150" fill="none" stroke="#C8C2AE" stroke-width="2"/>
+        <path d="M60 380 Q40 300 90 260 Q140 300 120 380 Z" fill="#5B6F5C"/>
+        <path d="M150 380 Q125 280 190 230 Q255 280 230 380 Z" fill="#3E4F41"/>
+        <path d="M300 380 Q270 300 340 250 Q410 300 380 380 Z" fill="#5B6F5C"/>
+        <g transform="translate(190,260)">
+          <polygon points="60,0 120,55 0,55" fill="#6B4F32"/>
+          <rect x="15" y="55" width="90" height="65" fill="#8B6A45"/>
+          <rect x="45" y="85" width="18" height="35" fill="#3B2C1C"/>
+          <rect x="72" y="70" width="16" height="16" fill="#C99A44"/>
+          <rect x="0" y="118" width="120" height="6" fill="#4A3822"/>
+        </g>
+        <circle cx="430" cy="55" r="20" fill="#C99A44" opacity="0.85"/>
+      </svg>
+    </div>
+    <div class="hero-facts"><div class="wrap">
+      <div class="fact"><b>6</b><span>hostí, 3 spálne</span></div>
+      <div class="fact"><b>1 040 m</b><span>nad morom</span></div>
+      <div class="fact"><b>12 min</b><span>chôdze na turistický chodník</span></div>
+      <div class="fact"><b>4.9 / 5</b><span>hodnotenie hostí</span></div>
+    </div></div>
+  </section>
+
+  <div class="divider" style="margin-top:56px;"></div>
+
+  <section>
+    <div class="wrap about-grid">
+      <div>
+        <span class="kicker">O chate</span>
+        <h2>Postavená z miestneho smrekového dreva, otočená k Havranovi</h2>
+        <p id="aboutText" style="margin-top:16px; color:var(--spruce-2);">Chata stojí na lesnom okraji nad Tatranskou Kotlinou, mimo dosahu áut a davov.</p>
+        <ul class="amenities">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg> Fínska sauna pre 4</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg> Krb na drevo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg> Kryté státie pre 2 autá</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg> Wifi + práca z chaty</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg> Sušiareň na výstroj</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg> Vírivka na terase</li>
+        </ul>
+      </div>
+      <div class="about-panel">
+        <h3>Ako to tu funguje</h3>
+        <p>Check-in od 15:00, check-out do 10:00. Kľúč v mechanickej schránke — kód pošleme deň pred príchodom.</p>
+        <div class="stat-row"><span>Cena od</span><b id="aboutPrice">120 €/noc</b></div>
+        <div class="stat-row"><span>Minimálny pobyt</span><span>2 noci</span></div>
+        <div class="stat-row"><span>Domáce zvieratá</span><span>po dohode</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lastminute-teaser">
+    <div class="wrap">
+      <div class="section-head" style="max-width:640px;">
+        <span class="kicker" style="color:var(--amber);">Voľné termíny</span>
+        <h2 style="color:var(--cream);">Last minute pobyty</h2>
+        <p style="color:var(--limestone-2);">Neobsadené termíny so zľavou. Presný kalendár nájdete na stránke Kalendár.</p>
+      </div>
+      <div class="deal-cards" id="dealCards"></div>
+      <button class="btn-primary" style="margin-top:26px;" onclick="navigate('calendar')">Prejsť na kalendár</button>
+    </div>
+  </section>
+</div>
+
+<!-- CALENDAR -->
+<div class="page" id="page-calendar">
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Kalendár</span>
+        <h2>Vyberte si termín</h2>
+        <p>Kliknite na deň príchodu a potom na deň odchodu. Farebná bodka v rohu dňa znamená sezónnu cenu — obalte myšou pre detail.</p>
+      </div>
+      <div class="cal-shell">
+        <div>
+          <div class="cal-card">
+            <div class="cal-head">
+              <button class="cal-nav-btn" onclick="shiftMonth(-1)">&larr;</button>
+              <h3 id="calMonthLabel">—</h3>
+              <button class="cal-nav-btn" onclick="shiftMonth(1)">&rarr;</button>
+            </div>
+            <div class="cal-weekdays"><span>Po</span><span>Ut</span><span>St</span><span>Št</span><span>Pi</span><span>So</span><span>Ne</span></div>
+            <div class="cal-grid" id="calGrid"></div>
+            <div class="legend">
+              <span><i style="background:#F7F3E9; border:1px solid var(--line);"></i> Voľné</span>
+              <span><i style="background:var(--amber);"></i> Váš výber</span>
+              <span><i style="background:var(--pending);"></i> Čaká na potvrdenie</span>
+              <span><i style="background:var(--confirmed);"></i> Obsadené</span>
+              <span><i style="background:var(--blocked);"></i> Nedostupné</span>
+              <span><i style="background:var(--season-high); border-radius:50%;"></i> Vyššia sezónna cena</span>
+              <span><i style="background:var(--season-low); border-radius:50%;"></i> Zľavnená cena</span>
+            </div>
+          </div>
+          <div class="selection-bar empty" id="selectionBar">Zatiaľ ste nevybrali žiadny termín.</div>
+        </div>
+
+        <div class="cal-card">
+          <h3 style="font-size:1.1rem; margin-bottom:16px;">Žiadosť o rezerváciu</h3>
+          <div class="summary-box">
+            <div class="summary-line"><span>Termín</span><span id="sumDates">–</span></div>
+            <div class="summary-line"><span>Počet nocí</span><span id="sumNights">–</span></div>
+            <div class="summary-line total"><span>Spolu</span><span id="sumTotal">–</span></div>
+          </div>
+          <div class="summary-note" id="sumNote"></div>
+          <div class="field"><label>Meno a priezvisko</label><input id="bkName" type="text" placeholder="Jana Nováková"></div>
+          <div class="field"><label>E-mail</label><input id="bkEmail" type="email" placeholder="jana@example.com"></div>
+          <div class="field-row">
+            <div class="field"><label>Počet hostí</label><select id="bkGuests"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></div>
+            <div class="field"><label>Telefón (nepovinné)</label><input id="bkPhone" type="tel" placeholder="+421..."></div>
+          </div>
+          <div class="field"><label>Odkaz</label><textarea id="bkMsg" placeholder="Napríklad: prídeme neskoro večer..."></textarea></div>
+          <button class="btn-primary" style="width:100%;" id="bkSubmitBtn" onclick="submitBooking()" disabled>Najprv vyberte termín v kalendári</button>
+          <div id="bookingMsg"></div>
+          <div class="privacy-note">Vaše meno, e-mail a odkaz pošleme priamo prevádzkovateľovi e-mailom a na webe sa neukladajú. Do kalendára sa zapíšu len dátumy a stav rezervácie.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- GALLERY -->
+<div class="page" id="page-gallery">
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Galéria</span>
+        <h2>Chata cez ročné obdobia</h2>
+        <p>Skutočné fotky pridáva správca cez admin panel — nižšie je zatiaľ ukážkový set.</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+</div>
+
+<!-- NEARBY -->
+<div class="page" id="page-nearby">
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Okolie</span>
+        <h2>Čo je v okolí</h2>
+        <p>Chata leží v Tatranskej Kotline, na severnej strane Belianskych Tatier — v dosahu jaskyne, turistiky aj Ždiaru.</p>
+      </div>
+      <div class="nearby-grid">
+        <div class="nearby-card"><div class="nb-top"><h3>Belianska jaskyňa</h3><span class="nb-dist">10 min autom</span></div><p>Sprístupnená kvapľová jaskyňa priamo v Tatranskej Kotline — jedna z mála na Slovensku otvorená aj v zime.</p></div>
+        <div class="nearby-card"><div class="nb-top"><h3>Ždiar</h3><span class="nb-dist">15 min autom</span></div><p>Goralská dedina známa farebnými drevenicami, syrom a poctivou kuchyňou.</p></div>
+        <div class="nearby-card"><div class="nb-top"><h3>Chodník korunami stromov</h3><span class="nb-dist">20 min autom</span></div><p>Bachledova dolina — prechádzka nad korunami lesa s výhľadom na celé Belianske Tatry.</p></div>
+        <div class="nearby-card"><div class="nb-top"><h3>Turistika na Kopské sedlo</h3><span class="nb-dist">od chaty pešo</span></div><p>Značkovaný chodník priamo od Tatranskej Kotliny smerom do sedla, cca 3–4 hodiny tam a späť.</p></div>
+        <div class="nearby-card"><div class="nb-top"><h3>Kežmarok</h3><span class="nb-dist">25 min autom</span></div><p>Historické mesto s dreveným artikulárnym kostolom (UNESCO) a hradom.</p></div>
+        <div class="nearby-card"><div class="nb-top"><h3>Lyžovanie Ždiar–Bachledka</h3><span class="nb-dist">15–20 min autom</span></div><p>Menšie rodinné lyžiarske strediská bez tatranských davov.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- CONTACT -->
+<div class="page" id="page-contact">
+  <section>
+    <div class="wrap contact-grid">
+      <div>
+        <span class="kicker">Kontakt</span>
+        <h2>Máte otázku pred rezerváciou?</h2>
+        <ul class="info-list">
+          <li><b>Adresa</b>Tatranská Kotlina, Belianske Tatry, Slovensko</li>
+          <li><b>Telefón</b>+421 900 000 000</li>
+          <li><b>E-mail</b>info@chatapodhavranom.sk</li>
+        </ul>
+      </div>
+      <div>
+        <div class="field"><label>Meno</label><input id="ctName" type="text"></div>
+        <div class="field"><label>E-mail</label><input id="ctEmail" type="email"></div>
+        <div class="field"><label>Správa</label><textarea id="ctMsg"></textarea></div>
+        <button class="btn-primary" onclick="submitContact()">Odoslať správu</button>
+        <div id="contactMsg"></div>
+        <div class="privacy-note">Táto správa sa posiela e-mailom priamo prevádzkovateľovi a na webe sa neukladá.</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="newsletter-band">
+  <div class="wrap">
+    <h2>Nenechajte si ujsť voľné termíny</h2>
+    <p style="color:var(--limestone-2); margin-top:8px;">Raz za čas pošleme e-mail s novými last-minute pobytmi.</p>
+    <div class="newsletter-row">
+      <input id="newsletterEmail" type="email" placeholder="vas@email.com">
+      <button onclick="submitNewsletter()">Prihlásiť sa</button>
+    </div>
+    <div id="newsletterMsg" style="margin-top:10px; font-size:0.88rem;"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap footer-row">
+    <span>© 2026 Chata pod Havranom, Belianske Tatry</span>
+    <a class="admin-link" onclick="openAdmin()">Správa webu</a>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <div style="text-align:center;"><img id="lightboxImg" src="" alt=""><div class="lightbox-cap" id="lightboxCap"></div></div>
+</div>
+
+<!-- ADMIN -->
+<div class="admin-overlay" id="adminOverlay">
+  <div class="admin-box">
+    <button class="admin-close" onclick="closeAdmin()">&times;</button>
+    <div id="adminLoginView">
+      <h2>Prihlásenie správcu</h2>
+      <div class="disclaimer">Heslo overuje server, nie táto stránka — v kóde webu sa nikde neobjavuje. Žiadne meno, e-mail ani telefón hosťa sa tu neukladá, tie prídu len e-mailom.</div>
+      <div class="login-box">
+        <input id="adminPass" type="password" placeholder="Heslo správcu">
+        <button class="btn-primary" onclick="tryAdminLogin()">Vstúpiť</button>
+        <div id="adminLoginMsg" style="color:#a3392b; font-size:0.85rem; margin-top:8px;"></div>
+      </div>
+    </div>
+    <div id="adminMainView" style="display:none;">
+      <h2>Správa webu <button class="small-btn" style="float:right; font-weight:400;" onclick="adminLogout()">Odhlásiť sa</button></h2>
+      <p style="color:var(--sage); font-size:0.9rem;">Zmeny sa ukladajú priamo do tohto webu a vidia ich všetci návštevníci.</p>
+      <div class="admin-tabs">
+        <button class="atab active" data-tab="requests" onclick="showAdminTab('requests')">Žiadosti</button>
+        <button class="atab" data-tab="blocking" onclick="showAdminTab('blocking')">Blokovanie</button>
+        <button class="atab" data-tab="pricing" onclick="showAdminTab('pricing')">Ceny podľa termínu</button>
+        <button class="atab" data-tab="content" onclick="showAdminTab('content')">Obsah</button>
+        <button class="atab" data-tab="gallery" onclick="showAdminTab('gallery')">Galéria</button>
+        <button class="atab" data-tab="deals" onclick="showAdminTab('deals')">Last minute</button>
+        <button class="atab" data-tab="newsletter" onclick="showAdminTab('newsletter')">Newsletter</button>
+      </div>
+
+      <div class="admin-panel-view active" id="tab-requests">
+        <div class="disclaimer">Detaily hosťa (meno, e-mail, telefón, odkaz) nájdete vo svojej e-mailovej schránke pod rovnakým kódom rezervácie, aký vidíte tu.</div>
+        <div id="requestsAdminList"></div>
+      </div>
+
+      <div class="admin-panel-view" id="tab-blocking">
+        <p style="color:var(--sage); font-size:0.88rem;">Ručne zablokujte termín (vlastný pobyt, údržba) bez toho, aby vznikla rezervácia.</p>
+        <div class="field-row">
+          <div class="field"><label>Od</label><input id="adm_blockStart" type="date"></div>
+          <div class="field"><label>Do</label><input id="adm_blockEnd" type="date"></div>
+        </div>
+        <div class="field"><label>Poznámka</label><input id="adm_blockNote" placeholder="Vlastný pobyt"></div>
+        <button class="small-btn" onclick="addManualBlock()">Zablokovať termín</button>
+        <div id="blocksAdminList" style="margin-top:16px;"></div>
+      </div>
+
+      <div class="admin-panel-view" id="tab-pricing">
+        <p style="color:var(--sage); font-size:0.88rem;">Nastavte inú cenu za noc pre konkrétny rozsah dátumov — napríklad Vianoce, Silvester alebo mimosezónnu zľavu.</p>
+        <div class="field-row">
+          <div class="field"><label>Od</label><input id="adm_priceStart" type="date"></div>
+          <div class="field"><label>Do</label><input id="adm_priceEnd" type="date"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label>Cena za noc (€)</label><input id="adm_priceValue" type="number" placeholder="180"></div>
+          <div class="field"><label>Popis</label><input id="adm_priceLabel" placeholder="Vianočné sviatky"></div>
+        </div>
+        <button class="small-btn" onclick="addPriceRule()">Pridať cenové pravidlo</button>
+        <div id="pricingAdminList" style="margin-top:16px;"></div>
+      </div>
+
+      <div class="admin-panel-view" id="tab-content">
+        <div class="field"><label>Nadpis hero sekcie</label><input id="adm_heroTitle"></div>
+        <div class="field"><label>Podnadpis hero sekcie</label><textarea id="adm_heroTagline"></textarea></div>
+        <div class="field"><label>Text "O chate"</label><textarea id="adm_aboutText" style="min-height:100px;"></textarea></div>
+        <div class="field"><label>Základná cena za noc (€)</label><input id="adm_basePrice" type="number"></div>
+        <button class="btn-primary" onclick="saveContent()">Uložiť obsah</button>
+        <div id="contentSaveMsg"></div>
+      </div>
+
+      <div class="admin-panel-view" id="tab-gallery">
+        <div class="upload-box" id="uploadDropzone">
+          <input id="adm_imgFile" type="file" accept="image/*" multiple style="display:none;" onchange="handleFileUpload(this.files)">
+          <div class="upload-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 16V4M12 4l-4 4M12 4l4 4"/><path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+          </div>
+          <p><b>Nahrať fotky zo zariadenia</b><br>Presuňte sem súbory, alebo <button type="button" class="link-btn" onclick="document.getElementById('adm_imgFile').click()">vyberte súbory</button>. Fotka sa automaticky zmenší, popis môžete pridať potom v zozname nižšie.</p>
+          <div id="uploadProgress" class="upload-progress"></div>
+        </div>
+        <div class="or-divider"><span>alebo</span></div>
+        <div class="field-row">
+          <div class="field"><label>Vložiť URL obrázka (napr. z Imgur, Cloudinary)</label><input id="adm_imgUrl" placeholder="https://..."></div>
+          <div class="field"><label>Popis</label><input id="adm_imgCap" placeholder="Terasa v zime"></div>
+        </div>
+        <button class="small-btn" onclick="addGalleryImage()">Pridať podľa URL</button>
+        <div id="galleryStorageNote" class="storage-note"></div>
+        <div id="galleryAdminList" style="margin-top:16px;"></div>
+      </div>
+
+      <div class="admin-panel-view" id="tab-deals">
+        <p style="color:var(--sage); font-size:0.88rem;">Pridanie ponuky zároveň nastaví zodpovedajúcu cenu za noc pre tento termín.</p>
+        <div class="field"><label>Názov ponuky</label><input id="adm_dealTitle" placeholder="Posledný septembrový víkend"></div>
+        <div class="field-row">
+          <div class="field"><label>Od</label><input id="adm_dealStart" type="date"></div>
+          <div class="field"><label>Do</label><input id="adm_dealEnd" type="date"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label>Zľava (%)</label><input id="adm_dealDiscount" type="number" placeholder="20"></div>
+          <div class="field"><label>Poznámka</label><input id="adm_dealNote" placeholder="Posledné 2 noci"></div>
+        </div>
+        <button class="small-btn" onclick="addDeal()">Pridať ponuku</button>
+        <div id="dealsAdminList" style="margin-top:16px;"></div>
+      </div>
+
+      <div class="admin-panel-view" id="tab-newsletter"><div id="newsletterAdminList"></div></div>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/app.js"></script>
+</body>
+</html>

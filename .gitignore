@@ -1,0 +1,12 @@
+# secrets — never commit this
+server/.env
+
+# dependencies — reinstalled from package.json, don't need to be in git
+server/node_modules/
+
+# runtime data — this is your live site's data, not source code
+server/data.json
+
+# uploaded photos — these are content, not code; back them up separately if needed
+public/images/uploads/*
+!public/images/uploads/.gitkeep
